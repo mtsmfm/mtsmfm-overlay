@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>mtsmfm</name>
+    <source type="git">git://github.com/mtsmfm/mtsmfm-overlay.git</source>
+  </repo>
+</repositories>
