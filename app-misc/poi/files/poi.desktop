@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Poi
+Comment=Poi
+GenericName=Poi
+Exec=/usr/share/poi/poi %U
+Icon=poi
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Game;
+MimeType=text/plain;
