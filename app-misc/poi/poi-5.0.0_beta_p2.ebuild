@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/poooi/poi"
 MY_PV="${PV/_p/.}"
 MY_PV="${MY_PV/_/-}"
 
-SRC_URI="https://github.com/poooi/poi/releases/download/v${MY_PV}/poi-v${MY_PV}-linux-x64.7z"
+SRC_URI="https://github.com/poooi/poi/releases/download/v${MY_PV}/poi-v${PV/_*}-linux-x64.7z -> ${P}.7z"
 
 LICENSE="MIT"
 SLOT="0"
