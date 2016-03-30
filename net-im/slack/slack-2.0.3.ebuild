@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}
 
 src_install() {
-    insinto /usr
-    doins -r usr/share
-    fperms +x /usr/share/slack/slack
+    insinto /
+    doins -r usr
+    fperms +x /usr/lib/slack/slack
 }
