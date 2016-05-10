@@ -6,7 +6,11 @@ EAPI=5
 
 DESCRIPTION="Scalable KanColle browser and tool"
 HOMEPAGE="https://github.com/poooi/poi"
-SRC_URI="https://github.com/poooi/poi/releases/download/v${PV}/poi-v${PV}-linux-x64.7z"
+
+MY_PV="${PV/_p/.}"
+MY_PV="${MY_PV/_/-}"
+
+SRC_URI="https://github.com/poooi/poi/releases/download/v${MY_PV}/poi-v${MY_PV}-linux-x64.7z -> ${P}.7z"
 
 LICENSE="MIT"
 SLOT="0"
@@ -15,7 +19,13 @@ IUSE=""
 
 DEPEND="app-arch/p7zip"
 RDEPEND=""
-S="${WORKDIR}/poi-v${PV}-linux-x64"
+S="${WORKDIR}/poi-v${MY_PV}-linux-x64"
+
+src_unpack() {
+	local icon="https://github.com/poooi/poi/raw/v${MY_PV}/assets/icons/poi.png"
+	unpack ${A}
+	wget ${icon} -P ${S} || die
+}
 
 src_install() {
 	insinto /usr/share/poi
@@ -26,5 +36,5 @@ src_install() {
 	doins ${FILESDIR}/poi.desktop
 
 	insinto /usr/share/pixmaps
-	newins resources/app/assets/icons/icon.png poi.png
+	doins poi.png
 }
