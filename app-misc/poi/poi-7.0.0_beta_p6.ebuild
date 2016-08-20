@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/poooi/poi"
 MY_PV="${PV/_p/.}"
 MY_PV="${MY_PV/_/-}"
 
-SRC_URI="https://github.com/poooi/poi/releases/download/v${MY_PV}/poi-v${MY_PV}-linux-x64.7z -> ${P}.7z"
+SRC_URI="https://github.com/poooi/poi/releases/download/v${MY_PV}/poi-${MY_PV}-linux-x64.7z -> ${P}.7z"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="app-arch/p7zip"
 RDEPEND=""
-S="${WORKDIR}/poi-v${MY_PV}-linux-x64"
+S="${WORKDIR}/linux"
 
 src_unpack() {
 	local icon="https://github.com/poooi/poi/raw/v${MY_PV}/assets/icons/poi.png"

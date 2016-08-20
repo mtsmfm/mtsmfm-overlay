@@ -19,7 +19,7 @@ IUSE=""
 
 DEPEND="app-arch/p7zip"
 RDEPEND=""
-S="${WORKDIR}/poi-v${MY_PV}-linux-x64"
+S="${WORKDIR}/linux"
 
 src_unpack() {
 	local icon="https://github.com/poooi/poi/raw/v${MY_PV}/assets/icons/poi.png"
