@@ -7,8 +7,8 @@ EAPI=6
 EGO_PN="github.com/docker/docker"
 
 SRC_URI="
-	https://get.docker.com/builds/Linux/x86_64/docker-1.12.6.tgz
-	https://github.com/docker/docker/archive/v1.12.6.tar.gz
+	https://get.docker.com/builds/Linux/x86_64/docker-${PV}-ce.tgz
+	https://github.com/docker/docker/archive/v${PV}-ce.tar.gz
 "
 
 KEYWORDS="~amd64"
@@ -161,7 +161,6 @@ pkg_setup() {
 }
 
 src_install() {
-	pwd
 	cd $WORKDIR/docker
 
 	dobin docker
@@ -171,7 +170,7 @@ src_install() {
 	dobin docker-containerd-shim
 	dobin docker-runc
 
-	cd $WORKDIR/docker-${PV}
+	cd $WORKDIR/docker-${PV}-ce
 
 	newinitd contrib/init/openrc/docker.initd docker
 	newconfd contrib/init/openrc/docker.confd docker
